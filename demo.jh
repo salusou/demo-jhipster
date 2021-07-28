@@ -1,0 +1,35 @@
+
+entity Loja {
+	nome String required
+    endereco String
+    telefone String maxlength(11) required
+}
+
+entity Cliente{
+	nome String required
+    endereco String
+    telefone String
+}
+
+entity Compra{
+	nomeProduto String required
+    valor BigDecimal required
+}
+
+relationship ManyToOne {
+	Loja to Compra{loja(nome) required }
+    Cliente to Compra{cliente(nome) required }
+} 
+
+
+// Set pagination options
+paginate * with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
