@@ -1,0 +1,43 @@
+{
+  "name": "Compra",
+  "fields": [
+    {
+      "fieldName": "nomeProduto",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "loja",
+      "otherEntityRelationshipName": "compra",
+      "relationshipValidateRules": "required",
+      "relationshipName": "loja",
+      "otherEntityField": "nome"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "compra",
+      "relationshipValidateRules": "required",
+      "relationshipName": "cliente",
+      "otherEntityField": "nome"
+    }
+  ],
+  "entityTableName": "compra",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210728135711"
+}
