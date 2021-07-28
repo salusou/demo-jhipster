@@ -1,0 +1,27 @@
+{
+  "thalissonApp": {
+    "loja": {
+      "home": {
+        "title": "Lojas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Loja",
+        "createOrEditLabel": "Crear o editar Loja",
+        "notFound": "Ningún Lojas encontrado"
+      },
+      "created": "Un nuevo Loja ha sido creado con el identificador {{ param }}",
+      "updated": "Un Loja ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Loja ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Loja {{ id }}?"
+      },
+      "detail": {
+        "title": "Loja"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "endereco": "Endereco",
+      "telefone": "Telefone",
+      "compra": "Compra"
+    }
+  }
+}
